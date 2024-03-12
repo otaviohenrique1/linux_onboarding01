@@ -1,0 +1,62 @@
+ip addr => ip da maquina
+
+APT:
+- exemplo => sudo apt install mysql-server
+- exemplo => sudo apt update
+- exemplo => sudo apt install openssh-server
+
+pwd => retorna localização do terminal
+- exemplo => pwd
+
+ls => lista arquivos e diretorios
+- exemplo => ls
+- exemplo => ls --help => exibe a ajuda do comando ls
+- exemplo => ls -a => mostra todos os diretorios, mesmo os ocultos
+- exemplo => ls -la => mostra todos os diretorios com o nome dos seus autores
+- ll => ls -la ou ls -al
+
+clear => limpa o terminal
+- exemplo => clear
+
+ctrl + l => limpa o terminal
+
+man <comando> => manual de algum comando
+- exemplo => man ls
+
+cd => entra em um diretorio
+- exemplo => cd => volta para o diretorio home
+- exemplo => cd home
+- exemplo => cd -
+- exemplo => cd ~ => volta para o diretorio home
+- exemplo => cd 'Área de Trabalho'
+- exemplo => cd .. => volta para o diretorio anterior
+
+mkdir => criar um diretorio ou mais diretorios
+- exemplo => mkdir projetos
+- exemplo => mkdir projetos estudos
+- exemplo => mkdir diretorio\ 1 => '\ ' é espaço
+- exemplo => mkdir 'estudos de terminal'
+- exemplo => mkdir -p dir1/dir2/dir3/dir4 => criar varios diretorios (um dentro do outro)
+
+touch => criar um arquivo ou mais arquivos
+- exemplo => touch projetos.txt
+- exemplo => touch projetos.txt estudos.txt
+
+rm => apaga um arquivo/diretorio ou mais arquivos/diretorios
+- exemplo => rm exercicios.txt
+- exemplo => rm -r dir1 => -r => apaga de forma recursiva
+- exemplo => rm -rf dir1 => -rf => apaga de forma recursiva e ignora avisos
+
+rmdir => apaga um diretorio ou mais diretorios
+- exemplo => rmdir exercicios
+
+cp => copia um arquivo
+- exemplo => cp exercicios.txt 'estudos de terminal'
+- exemplo => cp *.txt 'estudos de terminal'
+- exemplo => cp -r * 'estudos de terminal' => * => tudo
+- exemplo => cp -r dir1/* dir2 => * => tudo
+- exemplo => cp -r dir1 => -r => copia de forma recursiva
+
+mv => move um diretorio ou mais diretorios para outro lugar e tambem serve para renomear arquivos e diretorios
+- exemplo => mv exercicios.txt tarefas => mover arquivo
+- exemplo => mv exercicios.txt exercicios2.txt => renomear arquivo
