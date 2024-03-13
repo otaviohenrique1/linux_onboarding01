@@ -13,7 +13,8 @@ ls => lista arquivos e diretorios
 - exemplo => ls --help => exibe a ajuda do comando ls
 - exemplo => ls -a => mostra todos os diretorios, mesmo os ocultos
 - exemplo => ls -la => mostra todos os diretorios com o nome dos seus autores
-- ll => ls -la ou ls -al
+- exemplo => ll => ls -la ou ls -al
+- exemplo => ls -lh
 - exemplo => ls arq1? => '?' => substitui um caractrere na exibicao
 - exemplo => ls ????
 - exemplo => ls ???[1-5]
@@ -85,14 +86,35 @@ grep => busca algo no conteudo de um ou mais arquivos
 - exemplo => grep -r HTTP * => -r => busca de forma recursiva em varios arquivos em diferentes diretorios
 
 more => retorna o arquivo de forma paginada
--exemplo => more /etc/passwd
+- exemplo => more /etc/passwd
 
 less => retorna o arquivo de forma paginada
--exemplo => more /etc/passwd
+- exemplo => more /etc/passwd
 
 tail => ver as ultimas linhas do arquivo
--exemplo => tail /etc/passwd
--exemplo => tail -n 3 /etc/passwd
+- exemplo => tail /etc/passwd
+- exemplo => tail -n 3 /etc/passwd
 
 head => ver as primeiras linhas do arquivo
--exemplo => head /etc/passwd
+- exemplo => head /etc/passwd
+- exemplo => head -n 3 /etc/passwd
+
+find => procurar arquivos
+- exemplo => find / -name *.conf
+- exemplo => find / -iname *.conf
+- exemplo => sudo find / -name *.conf
+- exemplo => find /etc -maxdepth 2 -name *.conf
+- exemplo => sudo find /etc -maxdepth 2 -name *.conf
+- exemplo => find . -amin -5 => o que aconteceu nos últimos cinco minutos
+- exemplo => find . -atime -2 => o que aconteceu nos últimos dias
+- exemplo => sudo find / -size +100M => busca por tamanho de arquivo
+- exemplo => sudo find / -size +3G => busca por tamanho de arquivo
+
+Redirecionamentos de saida:
+> => cria e sobrescreve o arquivo
+- exemplo => grep ssh services > listagem.txt
+>> => da yum append no arquivo (coloca em outra linha)
+- exemplo => grep 3389 services >> listagem.txt
+| => redireciona saida de um comando
+- exemplo => cat /etc/passwd | grep otavio
+- exemplo => cat /etc/passwd | grep otavio > listagem_usuarios
