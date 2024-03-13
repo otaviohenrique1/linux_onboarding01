@@ -14,6 +14,14 @@ ls => lista arquivos e diretorios
 - exemplo => ls -a => mostra todos os diretorios, mesmo os ocultos
 - exemplo => ls -la => mostra todos os diretorios com o nome dos seus autores
 - ll => ls -la ou ls -al
+- exemplo => ls arq1? => '?' => substitui um caractrere na exibicao
+- exemplo => ls ????
+- exemplo => ls ???[1-5]
+- exemplo => ls ???[1-5]*
+- exemplo => ls *[1-5]
+- exemplo => ls arq[1-5]
+- exemplo => ls arq[1,5]
+- exemplo => ls [A-a]rq[1,5]
 
 clear => limpa o terminal
 - exemplo => clear
@@ -59,4 +67,32 @@ cp => copia um arquivo
 
 mv => move um diretorio ou mais diretorios para outro lugar e tambem serve para renomear arquivos e diretorios
 - exemplo => mv exercicios.txt tarefas => mover arquivo
+- exemplo => mv dir1/* dir4 => mover todo conteudo de dir1 para dir4 
 - exemplo => mv exercicios.txt exercicios2.txt => renomear arquivo
+
+history => historico de comandos do terminal
+- exemplo => history
+
+cat => exibe o conteudo de um arquivo
+- exemplo => cat projetos.txt
+
+grep => busca algo no conteudo de um ou mais arquivos
+- exemplo => grep http services
+- exemplo => grep -i http services => -i => mostra resultados maiusculos e minusculos
+- exemplo => grep otavio *
+- exemplo => grep -l otavio * => -l => retorna os arquivos com o resultado
+- exemplo => grep -L otavio * => -L => retorna os arquivos sem o resultado
+- exemplo => grep -r HTTP * => -r => busca de forma recursiva em varios arquivos em diferentes diretorios
+
+more => retorna o arquivo de forma paginada
+-exemplo => more /etc/passwd
+
+less => retorna o arquivo de forma paginada
+-exemplo => more /etc/passwd
+
+tail => ver as ultimas linhas do arquivo
+-exemplo => tail /etc/passwd
+-exemplo => tail -n 3 /etc/passwd
+
+head => ver as primeiras linhas do arquivo
+-exemplo => head /etc/passwd
