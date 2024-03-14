@@ -4,6 +4,7 @@ APT:
 - exemplo => sudo apt install mysql-server
 - exemplo => sudo apt update
 - exemplo => sudo apt install openssh-server
+- exemplo => sudo apt install wamerican
 
 pwd => retorna localização do terminal
 - exemplo => pwd
@@ -35,7 +36,7 @@ man <comando> => manual de algum comando
 cd => entra em um diretorio
 - exemplo => cd => volta para o diretorio home
 - exemplo => cd home
-- exemplo => cd -
+- exemplo => cd - => volta para o ultimo diretorio
 - exemplo => cd ~ => volta para o diretorio home
 - exemplo => cd 'Área de Trabalho'
 - exemplo => cd .. => volta para o diretorio anterior
@@ -118,3 +119,12 @@ Redirecionamentos de saida:
 | => redireciona saida de um comando
 - exemplo => cat /etc/passwd | grep otavio
 - exemplo => cat /etc/passwd | grep otavio > listagem_usuarios
+- exemplo => cat listagem.txt | sort > listagem2.txt
+- exemplo => cat syslog | grep systemd | wc => wc => faz a contagem de linhas, de palavras e a informação em bytes
+- exemplo => cat syslog | grep systemd | wc -l => wc -l => faz a contagem somente de linhas
+- cat logs | cut -d " " -f6- => cut pega uma coluna do arquivo
+
+Grep com regex(expressao regular):
+- exemplo => cat american-english | grep -E "^computer" => começa com computer
+- exemplo => cat american-english | grep -E "computer$" => termina com computer
+- exemplo => cat american-english | grep -E "^computer$" => começa e termina com computer
