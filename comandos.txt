@@ -164,3 +164,13 @@ vi => abre o editor de texto do terminal
   -- u => desfaz as alterações
 
 chmod u+x backup.sh
+
+ping localhost
+
+hostname -I
+
+sudo lshw => mostra informações do sistema e do hardware
+
+free => mostra informações da memoria
+
+df -h
