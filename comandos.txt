@@ -128,3 +128,39 @@ Grep com regex(expressao regular):
 - exemplo => cat american-english | grep -E "^computer" => começa com computer
 - exemplo => cat american-english | grep -E "computer$" => termina com computer
 - exemplo => cat american-english | grep -E "^computer$" => começa e termina com computer
+- exemplo => cat american-english | egrep "^computer$" => egrep => atalho para grep -E
+- exemplo => egrep "^.oot$" american-english
+- exemplo => egrep "^.oot.." american-english
+- exemplo => egrep "^[aeiou].oot.." american-english
+- exemplo => egrep "^[flmr].oot.." american-english
+- exemplo => egrep "^[0-9].oot.." american-english
+- exemplo => egrep "^[l-n].oot.." american-english
+
+nano => abre o editor de texto do terminal
+- comandos:
+  ^ => ctrl
+  M => alt
+
+vi => abre o editor de texto do terminal
+- comandos:
+  -- i => entra no modo de edição de texto
+  -- :w => salva o arquivo de texto
+  -- :w arquivo.txt => salva o arquivo de texto com o nome do arquivo
+  -- esc => sai do modo de edição de texto
+  -- :q => sai do editor de texto
+  -- vi arquivo.txt => abre o arquivo no vi
+  -- A => vai para o final da linha
+  -- :q! => sai do editor de texto sem salvar
+  -- yy => copiar linha
+  -- p => colar linha
+  -- dd => recortar linha
+  -- :/<texto> => pesquisar termos
+  -- :s/<texto>/<novo texto> => substituir termos
+  -- :s/<texto>/<novo texto>/g => substituir termos em todas as partes da linha
+  -- :%s/<texto>/<novo texto>/g => substituir termos em todas as linhas
+  -- gg => vai para o inicio do arquivo
+  -- G => vai para o final do arquivo
+  -- :10 => vai para a linha 10 do arquivo
+  -- u => desfaz as alterações
+
+chmod u+x backup.sh
