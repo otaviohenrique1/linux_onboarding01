@@ -5,6 +5,7 @@ APT:
 - exemplo => sudo apt update
 - exemplo => sudo apt install openssh-server
 - exemplo => sudo apt install wamerican
+- exemplo => sudo apt install apache2
 
 pwd => retorna localização do terminal
 - exemplo => pwd
@@ -174,3 +175,15 @@ sudo lshw => mostra informações do sistema e do hardware
 free => mostra informações da memoria
 
 df -h
+
+dmesg => mostra informações sobre o disco
+
+cat auth.log
+
+tail -f auth.log => -f => vai manter o arquivo aberto e cada nova entrada do arquivo, ele vai colocar em tempo real
+
+ps => vai te dar uma foto do processo
+
+top => vai listar os processos de forma dinâmica
+
+sudo service apache2 status
