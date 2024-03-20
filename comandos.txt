@@ -226,3 +226,37 @@ sudo userdel => apaga usuario
 
 sudo groupdel => apaga grupo
 - exemplo => sudo groupdel desenvolvedores
+
+Entendendo o permissionamento dos arquivos e diretórios
+
+permissioes   dono    grupo
+drwxrwxr-x  3 ricardo ricardo 4096 Feb 3 17:32 backup
+-rw-rw-r-x  1 ricardo ricardo    0 Feb 6 12:03 novoteste
+
+diretorio so tem um dono e pertence a um unico grupo
+
+drwxrwxrwx 
+-rwxrwxrwx 
+  - d => directory => diretorio
+  - - => file => arquivo
+  - r => read => leitura
+  - w => write => escrita
+  - x => execute => executar
+
+comando
+  - sudo chmod -R 755 <diretorio>
+
+755
+  - 7 => rwx => user => usuario
+  - 5 => r-x => group => grupo
+  - 5 => r-x => other => outro
+
+Representação numerica
+  - 7 => rwx
+  - 6 => rw-
+  - 5 => r-x
+  - 4 => r--
+  - 3 => -wx
+  - 2 => -w-
+  - 1 => --x
+  - 0 => ---
