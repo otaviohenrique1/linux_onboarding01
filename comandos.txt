@@ -204,3 +204,25 @@ su => troca de usuario
 - exemplo => sudo su
 
 passwd => troca a senha
+
+sudo useradd => adiciona usuario
+- exemplo => sudo useradd otavio2
+
+sudo adduser => adiciona usuario
+- exemplo => sudo adduser otavio3
+
+sudo groupadd => adiciona grupo
+- exemplo => sudo groupadd projetos
+
+sudo usermod <opções> => modifica o usuario
+
+sudo usermod -aG
+  - -a => acrescentar
+  - -G => acrescentar a grupos suplementares
+  - sudo usermod -aG projetos otavio3
+
+sudo userdel => apaga usuario
+- exemplo => sudo userdel otavio2
+
+sudo groupdel => apaga grupo
+- exemplo => sudo groupdel desenvolvedores
