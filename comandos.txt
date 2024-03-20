@@ -6,6 +6,7 @@ APT:
 - exemplo => sudo apt install openssh-server
 - exemplo => sudo apt install wamerican
 - exemplo => sudo apt install apache2
+- exemplo => sudo apt update
 
 pwd => retorna localização do terminal
 - exemplo => pwd
@@ -183,7 +184,23 @@ cat auth.log
 tail -f auth.log => -f => vai manter o arquivo aberto e cada nova entrada do arquivo, ele vai colocar em tempo real
 
 ps => vai te dar uma foto do processo
+- exemplo => ps aux | grep apache2
 
 top => vai listar os processos de forma dinâmica
 
 sudo service apache2 status
+
+while :; do curl -l http://192.168.0.53; done
+
+kill <sinal> <processo> => encerra o processo
+- exemplo => kill -9 6229
+- exemplo => kill -l => -l => lista de sinais de encerramento de processo
+
+pstree => mostra os processos em forman de arvore
+
+groups => mostra o grupo do usuario
+
+su => troca de usuario
+- exemplo => sudo su
+
+passwd => troca a senha
