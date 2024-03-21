@@ -3,10 +3,12 @@ ip addr => ip da maquina
 APT:
 - exemplo => sudo apt install mysql-server
 - exemplo => sudo apt update
+- exemplo => sudo apt upgrade
 - exemplo => sudo apt install openssh-server
 - exemplo => sudo apt install wamerican
 - exemplo => sudo apt install apache2
-- exemplo => sudo apt update
+- exemplo => sudo apt remove apache2
+- exemplo => sudo apt list --upgradable
 
 pwd => retorna localização do terminal
 - exemplo => pwd
@@ -229,11 +231,9 @@ sudo groupdel => apaga grupo
 
 Entendendo o permissionamento dos arquivos e diretórios
 
-permissioes   dono    grupo
+permissoes   dono    grupo
 drwxrwxr-x  3 ricardo ricardo 4096 Feb 3 17:32 backup
 -rw-rw-r-x  1 ricardo ricardo    0 Feb 6 12:03 novoteste
-
-diretorio so tem um dono e pertence a um unico grupo
 
 drwxrwxrwx 
 -rwxrwxrwx 
@@ -243,15 +243,22 @@ drwxrwxrwx
   - w => write => escrita
   - x => execute => executar
 
+diretorio so tem um dono e pertence a um unico grupo
+x tem direito de execução quando esta associado a um arquivo
+x quando associado a um diretorio da direito de acesso
+
 comando
   - sudo chmod -R 755 <diretorio>
+    -- exemplo => sudo chmod 660 proj1
+    -- exemplo => sudo chmod g+s proj1 => s => permissao especial de grupo
+    -- exemplo => sudo chmod o-r proj1 => o => terceira coluna
 
 755
   - 7 => rwx => user => usuario
   - 5 => r-x => group => grupo
   - 5 => r-x => other => outro
 
-Representação numerica
+Representação numerica (base octal (0-7))
   - 7 => rwx
   - 6 => rw-
   - 5 => r-x
@@ -260,3 +267,7 @@ Representação numerica
   - 2 => -w-
   - 1 => --x
   - 0 => ---
+
+sudo chown otavio /projetos
+
+ln -s /projetos => cria link simbolico
